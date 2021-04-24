@@ -218,11 +218,17 @@ function cartClick(event) {
 window.addEventListener('mouseup', cartClickOutside)
 
 function cartClickOutside(event){
-	var box = document.getElementsByClassName("cart-checkout")[0];
-	if (event.target != box && event.target.parentNode != box){
+	var box = document.getElementById("cart");
+
+    var cartInput = document.getElementsByTagName("input")[0]
+    var cartInput2 = document.getElementsByTagName("input")[1]
+    var cartInput3 = document.getElementsByTagName("input")[2]
+
+	if (event.target != box && event.target.parentNode != box && event.target != cartInput && event.target != cartInput2 && event.target != cartInput3){
         box.style.display = 'none';
     }
 }
+
 
 
 
